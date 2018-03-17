@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+  <handler-chain>
+    <handler>
+      <handler-name>MessageHandler.OutboundMessageHandler</handler-name>
+      <handler-class>MessageHandler.OutboundMessageHandler</handler-class>
+    </handler>
+    <handler>
+      <handler-name>MessageHandler.InboundMessageHandler</handler-name>
+      <handler-class>MessageHandler.InboundMessageHandler</handler-class>
+    </handler>
+  </handler-chain>
+</handler-chains>

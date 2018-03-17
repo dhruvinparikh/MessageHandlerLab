@@ -11,14 +11,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="processMessage.jsp" method="post">
+        <form action="" method="post">
             <input type="text" name="msg">
             <input type="submit" value="Send" name="send">
         </form>
         <br>
         <%-- start web service invocation --%><hr/>
         <%
-            if (request.getParameter("Send") != null) {
+            if (request.getParameter("send") != null) {
                 if (request.getParameter("send").equals("Send")) {
                     try {
                         messagehandler.client.MessageHandlerService_Service service = new messagehandler.client.MessageHandlerService_Service();

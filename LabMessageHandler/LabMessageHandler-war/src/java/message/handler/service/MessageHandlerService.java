@@ -5,6 +5,7 @@
  */
 package message.handler.service;
 
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -14,6 +15,7 @@ import javax.jws.WebParam;
  * @author dhruvinparikh.byethost24.com
  */
 @WebService(serviceName = "MessageHandlerService")
+@HandlerChain(file = "config.xml")
 public class MessageHandlerService {
 
     /**
@@ -21,6 +23,6 @@ public class MessageHandlerService {
      */
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
+        return txt + " !";
     }
 }
